@@ -1,7 +1,7 @@
 const { Pool } = require('pg');
-const config = require("./config");
 
-const { db: { connectionString } } = config;
+const connectionString = process.env.CON_STR;
+console.log(process.env.CON_STR);
 
 const pool = new Pool({
     connectionString
